@@ -10,6 +10,5 @@ export class SectionComponent {
 
   startTime($event: string) {
     this.present = $event;
-    console.log($event);
   }
 }
