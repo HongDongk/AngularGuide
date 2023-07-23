@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-buttons',
@@ -6,7 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./buttons.component.css'],
 })
 export class ButtonsComponent {
-  start($event: MouseEvent) {
-    console.log($event);
+  @Output() clickEvent = new EventEmitter(); // 부모컴포넌트(secion)에 데이터 전달
+
+  alarm($event: MouseEvent) {
+    window.alert('경고');
+  }
+
+  start() {
+    this.clickEvent.emit('시발'); // 부모컴포넌트(secion)에 데이터 전달
   }
 }
