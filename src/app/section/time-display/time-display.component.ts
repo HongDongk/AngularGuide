@@ -16,6 +16,6 @@ export class TimeDisplayComponent implements OnInit {
 
   // Input데이터값(inputData)값이 바뀌면 실행 - 컴포넌트여서 사용가능한 함수
   ngOnChanges() {
-    console.log('sdfdsf');
+    console.log('바뀜');
   }
 }
