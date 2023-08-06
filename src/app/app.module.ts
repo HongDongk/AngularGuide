@@ -7,26 +7,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { SectionComponent } from './section/section.component';
-import { TimeDisplayComponent } from './section/time-display/time-display.component';
-import { ButtonsComponent } from './section/buttons/buttons.component';
 import { LayoutModule } from './layout/layout.module';
+import { SectionModule } from './section/section.module';
 
 @NgModule({
   // 모듈에 컴포넌트를 선언해야 사용가능!(다른모듈에는 동일 컴포넌트 등록 불가능)
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    SectionComponent,
-    TimeDisplayComponent,
-    ButtonsComponent,
-  ],
+  declarations: [AppComponent],
 
   // 사용하고 싶은 모듈(안에 컴포넌트) 사용할 수 있도록 만들어줌
-  imports: [BrowserModule, AppRoutingModule, LayoutModule],
+  imports: [BrowserModule, AppRoutingModule, LayoutModule, SectionModule],
 
   // 다른모듈들이 사용할 수 있도록 만들어줌
   exports: [AppComponent],

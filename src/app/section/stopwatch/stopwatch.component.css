@@ -1,0 +1,12 @@
+.title {
+  width: 100vw;
+  height: 20vh;
+}
+
+.display {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
