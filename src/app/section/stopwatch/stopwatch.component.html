@@ -6,4 +6,7 @@
     <!-- section에서 변경된 present 값이 흘러들어감 -->
     <app-buttons (clickEvent)="startTime($event)"></app-buttons>
   </div>
+
+  <!-- / 가 잇으면 stopwatch => clock으로 url 변경, 없으면 stopwatch/clock으로 변경 -->
+  <a [routerLink]="'/clock'">시계페이지로 이동</a>
 </div>

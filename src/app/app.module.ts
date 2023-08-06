@@ -9,13 +9,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
 import { SectionModule } from './section/section.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   // 모듈에 컴포넌트를 선언해야 사용가능!(다른모듈에는 동일 컴포넌트 등록 불가능)
   declarations: [AppComponent],
 
   // 사용하고 싶은 모듈(안에 컴포넌트) 사용할 수 있도록 만들어줌
-  imports: [BrowserModule, AppRoutingModule, LayoutModule, SectionModule],
+  imports: [
+    RouterModule,
+    BrowserModule,
+    AppRoutingModule,
+    LayoutModule,
+    SectionModule,
+  ],
 
   // 다른모듈들이 사용할 수 있도록 만들어줌
   exports: [AppComponent],
