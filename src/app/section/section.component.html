@@ -1,6 +1,8 @@
 <div class="title">
   <div class="display">
+    <!-- inputData로 time-display로 데이터보내기 -->
     <app-time-display [inputData]="present"></app-time-display>
+
     <!-- section에서 변경된 present 값이 흘러들어감 -->
     <app-buttons (clickEvent)="startTime($event)"></app-buttons>
   </div>
